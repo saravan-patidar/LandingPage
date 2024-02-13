@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: sans-serif;
+}
+
+.bg-img {
+  width: 100vw;
+  background-image: url(https://media.istockphoto.com/id/168340083/photo/choosemyplate-healthy-food-and-plate-of-usda-balanced-diet-recommendation.jpg?s=612x612&w=0&k=20&c=S5OYuPg-n1fuOOgReQf9xPuFgA1i-UO54Uj2u1RD7iU=);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: -120px -100px;
+  position: absolute;
+  z-index: -20;
+  filter: blur(4px);
+}
+.coverImage {
+  box-shadow: 0px 0px 10px black;
+}
+.animate {
+  animation: slideUp 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideUp {
+  0%,
+  50% {
+    bottom: -400px;
+  }
+  100% {
+    bottom: 0.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .bg-img {
+    background-position: center;
+    filter: blur(0px);
+  }
+}
